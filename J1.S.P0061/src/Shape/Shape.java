@@ -2,16 +2,10 @@ package Shape;
 
 public abstract class Shape {
 
-    public void printResult() {
+    public abstract void printResult();
 
-    }
+    public abstract double getPerimeter();
 
-    public double getPerimeter() {
-        return 0;
-    }
-
-    public double getArea() {
-        return 0;
-    }
+    public abstract double getArea();
 
 }
