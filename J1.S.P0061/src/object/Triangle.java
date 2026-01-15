@@ -43,17 +43,17 @@ public class Triangle extends Shape {
 
     @Override
     public void printResult() {
-        System.out.println("-----Triangle-----");
-        System.out.println("Side A: " + sideA);
-        System.out.println("Side B: " + sideB);
-        System.out.println("Side C: " + sideC);
-        System.out.println("Area: " + getArea());
+        System.out.println("-------Triangle-----");
+        System.out.println("Side A:" + getSideA());
+        System.out.println("Side B:" + getSideB());
+        System.out.println("Side C:" + getSideC());
+        System.out.println("Area" + getArea());
         System.out.println("Perimeter: " + getPerimeter());
     }
 
     @Override
     public double getPerimeter() {
-        return sideA + sideB + sideC;
+        return (sideA + sideB + sideC);
     }
 
     @Override
@@ -64,28 +64,28 @@ public class Triangle extends Shape {
 
     @Override
     public void input() {
+        sideA = Validation.checkDouble("Please input side A of Triangle:", 1, Double.MAX_VALUE);
+        sideB = Validation.checkDouble("Please input side B of Triangle:", 1, Double.MAX_VALUE);
+        sideC = Validation.checkDouble("Please input side C of Triangle:", 1, Double.MAX_VALUE);
+
         while (true) {
-            sideA = Validation.checkDouble("Please input side A of Triangle:", 1, Double.MAX_VALUE);
-            sideB = Validation.checkDouble("Please input side B of Triangle:", 1, Double.MAX_VALUE);
-            sideC = Validation.checkDouble("Please input side C of Triangle:", 1, Double.MAX_VALUE);
             if (checkTriangle()) {
                 setSideA(sideA);
                 setSideB(sideB);
                 setSideC(sideC);
-                break;
-            } else {
-                System.out.println("Input Triangle not Validation. Enter again:");
+                return;
+            } else{
+                System.out.print("Please input again Triangle:");
             }
-
         }
+
     }
 
     private boolean checkTriangle() {
-        if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
+        if (sideA + sideB > sideC && sideB + sideC > sideA && sideA + sideC > sideB) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
 }

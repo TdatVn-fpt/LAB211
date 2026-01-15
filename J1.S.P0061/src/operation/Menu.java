@@ -5,9 +5,11 @@ import object.Rectangle;
 import object.Shape;
 import object.Triangle;
 
+
+
 public class Menu {
 
-    Shape rectangle = new Rectangle(); // tham chiếu tới áp dụng tính đa hình gọi các phương thức có trong rectangle
+    Shape rectangle = new Rectangle();
     Shape circle = new Circle();
     Shape triangle = new Triangle();
 

@@ -7,12 +7,12 @@ public class Rectangle extends Shape {
     private double width;
     private double length;
 
+    public Rectangle() {
+    }
+
     public Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
-    }
-
-    public Rectangle() {
     }
 
     public double getWidth() {
@@ -33,11 +33,12 @@ public class Rectangle extends Shape {
 
     @Override
     public void printResult() {
-        System.out.println("----- Rectangle -----");
-        System.out.println("Width: " + width);
-        System.out.println("Length: " + length);
-        System.out.println("Area: " + getArea());
-        System.out.println("Perimeter: " + getPerimeter());
+        System.out.println("-----Rectangle-----");
+        System.out.println("Width:" + getWidth());
+        System.out.println("Length" + getLength());
+        System.out.println("Area:" + getArea());
+        System.out.println("Perimeter:" + getPerimeter());
+
     }
 
     @Override
@@ -47,12 +48,12 @@ public class Rectangle extends Shape {
 
     @Override
     public double getArea() {
-        return (width * length);
+        return width * length;
     }
 
     @Override
     public void input() {
-        width = Validation.checkDouble("Please input width of Rectangle:", 1, Double.MAX_VALUE);
+        width = Validation.checkDouble("Please input side width of Rectangle:", 1, Double.MAX_VALUE);
         length = Validation.checkDouble("Please input length of Rectangle:", 1, Double.MAX_VALUE);
     }
 
