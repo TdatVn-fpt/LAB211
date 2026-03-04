@@ -1,2 +1,0 @@
-Controller.WorkerManagement
-controller.WorkerController
