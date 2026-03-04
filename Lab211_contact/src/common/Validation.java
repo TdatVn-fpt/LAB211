@@ -14,7 +14,7 @@ public class Validation {
     public static int getInt(String msg, String err) {
         while (true) {
             try {
-                System.out.print(msg);
+                System.out.print(msg);    // ở bài lab thì thừa ln 
                 int num = Integer.parseInt(sc.nextLine().trim());
                 if (num > 0) return num;
                 System.out.println(err);
@@ -26,7 +26,7 @@ public class Validation {
 
     public static String getString(String msg, String err) {
         while (true) {
-            System.out.print(msg);
+            System.out.print(msg); // ở bài lab thì thừa ln 
             String str = sc.nextLine().trim();
             if (!str.isEmpty()) return str;
             System.out.println(err);
@@ -40,7 +40,9 @@ public class Validation {
             if (phone.matches(VALID_PHONE)) {
                 return phone;
             }
-            System.out.println("Please input Phone flow\n" +
+            
+            // dựa theo đề bài ghi nốt phone vào là xong
+            System.out.println("Please input Phone flow\n" +  
                     "* 1234567890\n" +
                     "* 123-456-7890\n" +
                     "* 123-456-7890 x1234\n" +

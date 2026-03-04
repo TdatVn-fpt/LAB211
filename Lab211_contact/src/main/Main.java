@@ -22,7 +22,7 @@ public class Main {
                     String name = Validation.getString("Enter Name: ", "Name is required.");
                     String group = Validation.getString("Enter Group: ", "Group is required.");
                     String address = Validation.getString("Enter Address: ", "Address is required.");
-                    String phone = Validation.getPhone("Enter Phone: ", "Invalid phone format.");
+                    String phone = Validation.getPhone("Enter Phone: ", "Invalid phone format.");  // ở đây bài lab lại ghi nhầm thành get String đãng nhẽ phải getPhone
                     
                     Contact newContact = new Contact(name, group, address, phone);
                     if (manager.addContact(contactList, newContact)) {
