@@ -10,7 +10,10 @@ public class Contact {
     private String group;
     private String address;
     private String phone;
-   // thừa public int getID
+    
+    public String getPhone(){
+        return phone;
+    }
 
     public Contact(String fullName, String group, String address, String phone) {   // fullName, firstName, lastName, group
         this.id = autoId++; 
@@ -46,4 +49,6 @@ public class Contact {
         System.out.printf("%-5d%-20s%-15s%-15s%-10s%-15s%-15s\n",                              //                              %-20s             %-10s %-15s %-15s\n      
             id, fullName, firstName, lastName, group, address, phone); // ở đây tôi đang bị lỗi là %-5d %-15s %-15s %-15s %-15s %-15s\n
     }
+
+
 }
