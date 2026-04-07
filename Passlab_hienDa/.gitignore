@@ -1,0 +1,18 @@
+# --- NetBeans specific ---
+/build/
+/dist/
+/nbproject/private/
+/nbproject/Makefile-*.mk
+/nbproject/Package-*.bash
+nbactions.xml
+nb-configuration.xml
+
+# --- Compiled output ---
+/out/
+
+# --- Log files ---
+*.log
+
+# --- OS specific ---
+.DS_Store
+Thumbs.db

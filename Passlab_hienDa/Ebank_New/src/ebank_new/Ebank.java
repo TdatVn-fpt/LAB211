@@ -62,14 +62,14 @@ public class Ebank {
                 System.out.println(rbundle.getString("Logginsucces"));
                 break;
             } else {
-                System.out.println(rbundle.getString("Logginfail"));
+                System.out.println(rbundle.getString("Logginfail"));   // thiếu chữ g
             }
         }
     }
     
     
     public String generateCaptcha(int length) {
-    String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";   // thiếu ksi tự in hoa
     String numbers = "0123456789";
     String special = "!@#$%^&*";
 
@@ -116,7 +116,7 @@ public class Ebank {
     }
     
     private boolean checkcaptcha(String captcha, String inputcaptcha) { 
-        if (inputcaptcha == null || inputcaptcha.isEmpty()) {
+        if (inputcaptcha == null || inputcaptcha.isEmpty()) {    
             return false;
         }
         return captcha.equals(inputcaptcha.trim());
